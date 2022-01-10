@@ -1,0 +1,186 @@
+<html>
+
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+
+  <!-- codestart -->
+
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="login.html" title="Send a Mail"><i class="far fa-envelope"></i></a></li>
+        <li><a href="login.html" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="login.html" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <section>
+        <div> </div>
+        <div>
+          <h1 id="logo"> <img class="logo-img" src="images/logo.png" alt="logo"> <a href="index.html"></a></h1>
+        </div>
+        <div>
+           
+        </div>
+      </section>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <nav id="mainav" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a>
+
+        </li>
+        <li><a class="drop" href="#">ORBAT</a>
+          <ul>
+            <li><a href="pakistan_force.html">Pakistan Force</a></li>
+
+            <li><a href="muktibahini.html">Mukti Bahini & Indian Force</a></li>
+          </ul>
+        </li>
+        <li><a href="sectors & commands.html">Sectors & Commanders</a> </li>
+        <li><a href="battle of each sector.html">Battle of Each Sector</a> </li>
+        <li><a href="leaders.html">Leaders of the Battles</a> </li>
+
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+  <!-- codeend -->
+
+
+
+
+
+  <div id="login_div" class="main-div">
+    <h3 class="text-center">login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+    <button style="margin-top: 6px;" onclick="signUp()">Create Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Battle Board'71 . You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBG_HVVCFbTs_V8LzKXeLOYaefbAD36Mlg",
+      authDomain: "battle-board-71.firebaseapp.com",
+      databaseURL: "https://battle-board-71-default-rtdb.firebaseio.com",
+      projectId: "battle-board-71",
+      storageBucket: "battle-board-71.appspot.com",
+      messagingSenderId: "910340341200",
+      appId: "1:910340341200:web:0328ec5c6c1508120d8dd5",
+      measurementId: "G-675JG98VNZ"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+
+
+
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div class="one_half first">
+        <h6 class="heading">Contact</h6>
+        <ul class="nospace linklist contact">
+          <li><i class="fas fa-map-marker-alt"></i>
+            <address>
+              MIST, Mirpur Cantonment, Dhaka, Bangladesh
+            </address>
+          </li>
+          <li><i class="fas fa-phone"></i> +8801769008507</li>
+
+          <li><i class="far fa-envelope"></i> nusrotliza3110@gmail.com</li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="heading">Pages</h6>
+        <ul class="nospace linklist">
+          <li><a href="#">phasellus condimentum nisl</a></li>
+          <li><a href="#">fames ac turpis nunc egestas</a></li>
+          <li><a href="#">senectus et netus malesuada</a></li>
+          <li><a href="#">quam habitant morbi tristique</a></li>
+          <li><a href="#">ultricies ut tortor posuere</a></li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="heading">Comment Here</h6>
+
+        <input type="text" class="mb-2" id="name" name="id" placeholder="Name">
+        <input type="text" class="mb-2" id="email" name="email" placeholder="Email">
+        <input type="text" class="mb-2" id="comment" name="comment" placeholder="Comment">
+
+        <button class="mb-2" onclick="submitData()"> Submit </button>
+        <button onclick="ViewAll()"> View All Comments </button>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; All Rights Reserved - <a href="#">Nusrot Jahan</a></p>
+
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+</html>

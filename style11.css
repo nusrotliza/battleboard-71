@@ -1,0 +1,24 @@
+.resources p{
+    margin: 10px;
+    padding: 30px;
+}
+
+.resources h3{
+    font-weight: 900;
+}
+
+.resources h5{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.resources img{
+    width: 700px;
+    height: 300px;
+    margin-left: 290px;
+}
+
+#footer .text-md-start {
+    /*text-align: left !important;*/
+    text-align: center;
+}
